@@ -11,8 +11,11 @@ const PORT = 3000;
 // use body parser on incoming requests
 app.use(bodyParser.json());
 
+// serve up static html file
+app.use('/', express.static('public'));
+
 // write dummy response to GET req
-app.get('/', (req, res) => {
+app.get('/dummy', (req, res) => {
   res.status(200).send('None shall pass!');
 });
 
