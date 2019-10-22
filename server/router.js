@@ -16,5 +16,10 @@ router.get('/', (req, res) => {
 // make test route to time
 router.get('/time', timeLog);
 
+// make route to get recommendations module
+router.get('/recommendations', (req, res) => {
+  res.send('Recommendations Module');
+});
+
 // export router
 module.exports = router;
