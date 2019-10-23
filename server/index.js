@@ -13,7 +13,7 @@ const PORT = 3000;
 app.use(bodyParser.json());
 
 // serve up static html file
-app.use('/', express.static('public'));
+app.use('/:listingid', express.static('public'));
 
 // write dummy response to GET req to /pass
 app.get('/pass', (req, res) => {
